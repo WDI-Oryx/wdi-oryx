@@ -97,3 +97,76 @@ var math = {
 
 // Create a multiply method!
 math.multiply(2, 3) + 5;
+
+console.clear();
+
+var explorer = {
+  name: {
+    first: "Jacques",
+    last: "Cousteau"
+  },
+  birth: {
+    day: 11,
+    month: 6,
+    year: 1910
+  }
+};
+// Use the explorer object to log out:
+//    "Jacques was born on 11/6/1910";
+
+var firstName = explorer.name.first;
+var fullName = firstName + " " + explorer.name.last;
+
+var description =
+  firstName +
+  " was born on " +
+  explorer.birth.day +
+  "/" +
+  explorer.birth.month +
+  "/" +
+  explorer.birth.year;
+
+console.log(description);
+
+// Should look like "Jacques Cousteau" when console.logged. Use the explorer object!
+
+var todaysClass = {
+  weekNumber: 1,
+  dayNumber: 5,
+  topics: ["Objects", "Scope", "Hoisting", "Callbacks"]
+};
+
+var classDetails =
+  "Week " +
+  todaysClass.weekNumber +
+  ", Day " +
+  todaysClass.dayNumber +
+  " topics:";
+
+console.log(classDetails);
+
+for (var i = 0; i < todaysClass.topics.length; i += 1) {
+  var currentTopic = todaysClass.topics[i];
+  console.log(currentTopic);
+}
+
+// Add this information to the todaysClass object!
+//
+// weekNumber = 1
+// dayNumber  = 5
+// topics = [ "Objects", "Scope", "Hoisting", "Callbacks" ]
+
+console.clear();
+
+var tweets = [
+  { username: "threequal", message: "Something something nerdy" },
+  { username: "meshoalmosallam", message: "I have 0 tweets" }
+];
+
+for (var i = 0; i < tweets.length; i += 1) {
+  var currentTweet = tweets[i];
+  var username = currentTweet.username;
+  var message = currentTweet.message;
+  var tweet = username + " posted: " + message;
+  console.log(tweet);
+}
