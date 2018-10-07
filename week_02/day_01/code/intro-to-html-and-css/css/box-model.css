@@ -1,0 +1,24 @@
+* {
+  /* When I set a width, that is the actual width. Padding and border are included, rather than them adding to the width */
+  box-sizing: border-box;
+}
+
+div {
+  background: papayawhip;
+  padding: 10px 10px 10px 10px;
+  /* Top | Right | Bottom | Left */
+  border: 10px solid black;
+  margin: 10px 15px 100px 12px;
+  /* Top | Right | Bottom | Left */
+}
+
+section {
+  background: red;
+  width: 300px;
+}
+
+section.box {
+  padding: 20px;
+  border: 10px solid black;
+  margin-bottom: 60px;
+}

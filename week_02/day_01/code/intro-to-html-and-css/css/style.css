@@ -1,0 +1,82 @@
+body {
+  text-align: center;
+  background: blanchedalmond;
+}
+
+h1 {
+  text-decoration: underline;
+  color: dodgerblue;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+img {
+  width: 300px;
+  display: block;
+  margin-bottom: 30px;
+}
+
+p {
+  font-size: 20px;
+  font-style: italic;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: rebeccapurple;
+  text-decoration: line-through;
+  text-transform: capitalize;
+  cursor: crosshair;
+}
+
+ul {
+  list-style: arabic-indic;
+}
+
+code {
+  font-size: 30px;
+}
+
+h2 {
+  text-align: center;
+}
+
+/* CSS Animations */
+
+/* All imgs with the class of bill */
+img.bill {
+  /* Variadic Attribute: Receives more than one piece of information */
+  border: 10px solid #16161d;
+  border-radius: 5%;
+  /* transition: border-radius 1s, transform 1s, filter 1s; */
+  transition: all 1s;
+  transform: rotate(0deg) scale(1);
+  filter: grayscale(100%);
+}
+
+/* Pseudo-Selector: State-based Selector */
+img.bill:hover {
+  border-radius: 50%;
+  transform: rotate(360deg) scale(1.4);
+  filter: grayscale(0%);
+}
+
+/* lis within ols */
+ol li {
+  color: red;
+}
+
+/* Change lis within uls to be blue */
+ul li {
+  color: blue;
+}
+
+/* h2s that are direct children of footers */
+footer>h2 {
+  color: green;
+}
+
+/* All elements that have the id of main-heading */
+#main-heading {
+  color: orange;
+}

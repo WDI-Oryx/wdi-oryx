@@ -1,0 +1,31 @@
+div.block {
+  background: green;
+  width: 50%;
+  display: block;
+  /* 
+    I can set widths and heights
+    Margins and paddings work
+    Things can't sit next to it
+  */
+}
+
+.half {
+  height: 100px;
+  width: 49%;
+  background: yellowgreen;
+  display: inline-block;
+}
+
+.quarter {
+  height: 50px;
+  width: 24.1%;
+  background: blue;
+  display: inline-block;
+}
+
+.third {
+  height: 100px;
+  width: 32%;
+  background: red;
+  display: inline-block;
+}
