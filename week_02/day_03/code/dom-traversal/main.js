@@ -161,3 +161,52 @@ for (var i = 0; i < allParagraphs.length; i += 1) {
   paragraph.innerHTML += Math.random();
   paragraph.style.border = "3px solid black";
 }
+
+console.clear();
+
+// Creating Elements
+// 1. Create the element and store it in a JS variable
+// 2. Change it (using things like .innerText, .style)
+// 3. Put it on the page
+
+var newHeading = document.createElement("h1");
+
+newHeading.innerText = "Created by JavaScript!";
+
+var targetDiv = document.querySelector("div.dynamic");
+targetDiv.appendChild(newHeading);
+
+var newImg = document.createElement("img");
+
+newImg.setAttribute("src", "https://fillmurray.com/300/300");
+newImg.style.border = "4px solid red";
+
+document.body.appendChild(newImg);
+
+var tweet = "This is a tweet";
+var author = "twitterUser42";
+
+var content = tweet + ", posted by " + author;
+
+var newParagraph = document.createElement("p");
+
+newParagraph.innerText = content;
+newParagraph.style.color = "blue";
+
+var newTweetsDiv = document.querySelector(".newTweets");
+newTweetsDiv.appendChild(newParagraph);
+
+// Create a new "a" tag
+var newLink = document.createElement("a");
+
+// Set the text to "This is a link to Google"
+newLink.innerText = "This is a link to Google";
+
+// Set the font color to be "hotpink"
+newLink.style.color = "hotpink";
+
+// Set the "href" to be "https://google.com.sa"
+newLink.setAttribute("href", "https://google.com.sa");
+
+// Put it at the end of the body tag
+document.body.appendChild(newLink);
