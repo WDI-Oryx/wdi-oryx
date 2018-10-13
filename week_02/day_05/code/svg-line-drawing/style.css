@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+}
+
+svg {
+  width: 100vw;
+  height: 100vh;
+}
+
+path {
+  stroke-dasharray: 4802.837890625;
+  stroke-dashoffset: 4802.837890625;
+  /* transition: all 1s; */
+}
+
+/* svg:hover path {
+  stroke-dashoffset: 0;
+} */
