@@ -27,7 +27,6 @@ end
 user_choice = menu()
 
 until user_choice == "q"
-
   case user_choice
   when "a" then add()
   end

@@ -1,4 +1,4 @@
-require 'pry'
+require "pry"
 
 if true
   puts "Yep, that makes sense"
@@ -28,7 +28,7 @@ is_logged_in = true
 
 if is_logged_in == true
   p "Here is your profile page"
-else 
+else
   p "You need to log in first"
 end
 
@@ -53,13 +53,13 @@ y = 8
 
 if x < y
   p "Y (#{y}) is a bigger number than X (#{x})"
-else 
+else
   p "X is bigger"
 end
 
 unless x > y
   p "Y (#{y}) is a bigger number than X (#{x})"
-else 
+else
   p "X is bigger"
 end
 
@@ -101,14 +101,14 @@ end
 # Have a variable called letter
 # Use a case statement
 # If the letter is in the range of a to e
-  # Print out, it is early in the alphabet
+# Print out, it is early in the alphabet
 # Else
-  # Print out, it is later in the alphabet
+# Print out, it is later in the alphabet
 binding.pry
 letter = "a"
 case letter
 when "a".."e"
   p "It is early in the alphabet"
-else 
+else
   p "It is later in the alphabet"
 end
