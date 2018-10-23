@@ -63,32 +63,13 @@ post = BlogPost.new
 # Any time a new Blog Post is created, print out "A new blog was written"
 
 class User
+  # Create a getter and a setter for @first_name
+  # Create a getter and a setter for @last_name
+  # Create a getter and a setter for @email
+  attr_accessor :first_name, :last_name, :email
+
   def initialize
     puts "A user signed up"
-  end
-
-  def first_name=(name) # Setters
-    @first_name = name
-  end
-
-  def first_name # Getters
-    @first_name
-  end
-
-  def last_name=(name)
-    @last_name = name
-  end
-
-  def last_name
-    @last_name
-  end
-
-  def email=(new_email)
-    @email = new_email
-  end
-
-  def email
-    @email # Implicit return
   end
 end
 
@@ -105,4 +86,25 @@ hunter.first_name = "Hunter"
 hunter.last_name = "Avenoir"
 hunter.email = "hunter@ga.co"
 
-binding.pry
+# Book
+# - title
+# - author
+# - read() -> Print out "You just read this book"
+
+class Book
+  attr_accessor :title, :author
+
+  def initialize(title, author)
+    @title = title
+    @author = author
+  end
+
+  def read()
+    puts "You just read #{@title}, by #{@author}"
+  end
+end
+
+geb = Book.new("GEB", "Douglas Hofstadter")
+# geb.title = "Godel, Escher and Bach"
+# geb.author = "Douglas Hofstadter"
+geb.read() # => "You just read this book"
