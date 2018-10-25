@@ -11,6 +11,10 @@ class PagesController < ApplicationController
   def about
     # render("pages/about")
   end
+
+  def color
+    @chosen_color = params[:color]
+  end
 end
 
 # Add a new routes to config/routes.rb

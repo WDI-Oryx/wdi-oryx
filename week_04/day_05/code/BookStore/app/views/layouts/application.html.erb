@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MyNewRailsApp</title>
+    <title>BookStore</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,14 +10,12 @@
   </head>
 
   <body>
-
     <nav>
-      <h1>Welcome to my Rails App</h1>
       <a href="/home">Home</a>
-      <a href="/about">About</a>
+      <a href="/books">All Books</a>
+      <a href="/books/GEB">One Book</a>
     </nav>
 
     <%= yield %>
-
   </body>
 </html>
