@@ -1,0 +1,10 @@
+<h2>This is a comment's show page</h2>
+
+<p><%= @comment.body %></p>
+
+<p>Written by: <%= @comment.name %></p>
+
+<h4>
+  This comment was written about 
+  <%= link_to @comment.book.title, book_path(@comment.book) %>
+</h4>

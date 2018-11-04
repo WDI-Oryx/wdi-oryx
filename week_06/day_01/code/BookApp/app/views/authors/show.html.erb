@@ -13,3 +13,24 @@
 <p>
   Description: <%= @author.description %>
 </p>
+
+<div class="controls">
+  <%= link_to "Edit Author", edit_author_path(@author) %>
+  <%= link_to "Delete Author", author_path(@author), method: :delete %>
+</div>
+
+<h3>This author has written:</h3>
+
+<ul>
+  <% @author.books.each do |book| %>
+    <li>
+      <%= link_to book.title, book_path(book) %>
+    </li>
+  <% end %>
+</ul>
+
+<h4>There are <%= pluralize(@author.comments.length, "comment") %></h4>
+
+<% @author.comments.each do |comment| %>
+  <p><%= comment.body %></p>
+<% end %>

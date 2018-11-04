@@ -1,0 +1,16 @@
+<%= form_for @comment do |f| %>
+  <div>
+    <%= f.label :name, "Name:" %>
+    <%= f.text_field :name, required: true %>
+  </div>
+  <div>
+    <%= f.label :body, "Body:" %>
+    <%= f.text_area :body, required: true %>
+  </div>
+  <%#= f.hidden_field :book_id, value: params[:id] %>
+  <div>
+    <%= f.label :book_id, "Which book is this about?" %>
+    <%= f.collection_select :book_id, Book.all, :id, :title %>
+  </div>
+  <%= f.submit %>
+<% end %>

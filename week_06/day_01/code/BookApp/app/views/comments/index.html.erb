@@ -1,0 +1,11 @@
+<h2>Here are all of the comments</h2>
+
+<ul>
+  <% @comments.each do |comment| %>
+    <li>
+      <%= link_to comment_path(comment) do %>
+        <%= comment.body.truncate(20) %>, written by <%= comment.name %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>

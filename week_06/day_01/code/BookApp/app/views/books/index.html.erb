@@ -1,0 +1,10 @@
+<h2>All Books</h2>
+
+<% @books.each do |book| %>
+  <div class="book">
+    <h3>
+      <%= book.title %>
+    </h3>
+    <%= link_to "See more", book_path(book) %>
+  </div>
+<% end %>

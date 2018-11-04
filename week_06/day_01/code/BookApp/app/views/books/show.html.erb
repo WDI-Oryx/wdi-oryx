@@ -1,0 +1,26 @@
+<h2>
+  <%= @book.title %>
+</h2>
+
+<p>
+  <%= @book.blurb %>
+</p>
+
+<p>
+  Written by: 
+  <%= link_to @book.author.name, author_path(@book.author) %>
+</p>
+
+<h4>
+  There is 
+  <%= pluralize(@book.comments.length, "comment") %>
+</h4>
+
+<% @book.comments.each do |c| %>
+  <p>
+    <%= c.body %>, written by <%= c.name %>
+    <strong>
+      <%= distance_of_time_in_words(c.created_at, Time.now) %>
+    </strong>
+  </p>
+<% end %>

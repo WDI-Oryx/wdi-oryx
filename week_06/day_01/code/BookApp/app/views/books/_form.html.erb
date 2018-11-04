@@ -1,0 +1,26 @@
+<%= form_for @book do |f| %>
+  <div>
+    <%= f.label :title, "What is the title?" %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :image, "Where is the image?" %>
+    <%= f.url_field :image %>
+  </div>
+  <div>
+    <%= f.label :blurb, "Describe the book" %>
+    <%= f.text_area :blurb %>
+  </div>
+  <div>
+    <%= f.label :author_id, "Who wrote this book?" %>
+    <%= f.collection_select :author_id, Author.all, :id, :name %>
+    <!--
+      :author_id === what this piece of data should be called in params
+      Author.all === the collection to show (the options for the user)
+      :id        === when you select something, the ID is added to params
+      :name      === the text in each option (the things that you select)
+    -->
+  </div>
+
+  <%= f.submit %>
+<% end %>

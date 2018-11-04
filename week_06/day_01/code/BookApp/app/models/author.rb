@@ -13,4 +13,8 @@
 #
 
 class Author < ApplicationRecord
+  has_many :books
+  has_many :comments, through: :books
+  # This defines a method called books on every instance of Author
+  # When you call this method, it will get all associated books (based on author_id)
 end
