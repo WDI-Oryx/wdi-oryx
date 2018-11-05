@@ -11,3 +11,10 @@
   <%= link_to @book.author.name, author_path(@book.author) %>
 </p>
 
+<h4>All Genres</h4>
+
+<% @book.genres.each do |genre| %>
+  <p>
+    <%= link_to genre.name, genre_path(genre) %>
+  </p>
+<% end %>

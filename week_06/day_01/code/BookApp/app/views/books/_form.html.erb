@@ -21,6 +21,16 @@
       :name      === the text in each option (the things that you select)
     -->
   </div>
+  <div>
+    <%= f.label :genre_ids, "What genre is this book?" %><br>
+    <%= f.collection_check_boxes :genre_ids, Genre.all, :id, :name %>
+    <!--
+      :genre_ids is the key in params
+      Genre.all is the collection that we are showing
+      :id is the value that will be added into params
+      :name is the text to show to the user
+    -->
+  </div>
 
   <%= f.submit %>
 <% end %>
