@@ -1,0 +1,19 @@
+<%= form_for @movie do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+  <div>
+    <%= f.label :year %>
+    <%= f.text_field :year %>
+  </div>
+  <div>
+    <%= f.label :actor_ids %>
+    <%= f.collection_check_boxes :actor_ids, Actor.all, :id, :name %>
+  </div>
+  <%= f.submit %>
+<% end %>

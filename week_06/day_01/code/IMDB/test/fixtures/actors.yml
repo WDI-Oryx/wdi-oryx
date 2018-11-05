@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: actors
+#
+#  id         :integer          not null, primary key
+#  name       :string
+#  dob        :date
+#  bio        :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  dob: 2018-11-05
+  bio: MyString
+
+two:
+  name: MyString
+  dob: 2018-11-05
+  bio: MyString
