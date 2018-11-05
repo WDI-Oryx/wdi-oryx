@@ -11,9 +11,3 @@ geb = Book.create(title: "Godel, Escher and Bach", image: "", blurb: "The best",
 strange_loop = Book.create(title: "I am a strange loop", image: "", blurb: "The best", author_id: doug.id)
 
 ulysses = Book.create(title: "Ulysses", image: "", blurb: "Pretty great", author_id: james.id)
-
-Comment.destroy_all
-
-ulysses.comments.create(name: "Rando", body: "This was fantastic! I didn't get arrested at the airport!")
-
-geb.comments.create(name: "Someone else", body: "This blew my mind")

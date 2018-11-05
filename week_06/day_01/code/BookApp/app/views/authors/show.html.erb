@@ -28,9 +28,3 @@
     </li>
   <% end %>
 </ul>
-
-<h4>There are <%= pluralize(@author.comments.length, "comment") %></h4>
-
-<% @author.comments.each do |comment| %>
-  <p><%= comment.body %></p>
-<% end %>
