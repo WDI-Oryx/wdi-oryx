@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+  # Given to us by Devise. If a request comes through to the PostsController make sure you call the method called authenticate_user! first
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+
   def index
     @posts = Post.all
   end

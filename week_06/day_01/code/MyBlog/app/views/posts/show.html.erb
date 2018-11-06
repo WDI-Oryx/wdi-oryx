@@ -12,7 +12,8 @@
 
 <% if @post.user %>
   <p>
-    Written by: <%= @post.user.email %>
+    Written by: 
+    <%= link_to @post.user.email, user_path(@post.user) %>
   </p>
 <% else %>
   <p>
