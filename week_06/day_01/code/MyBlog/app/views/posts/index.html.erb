@@ -1,0 +1,7 @@
+<h2>All Posts</h2>
+
+<% @posts.each do |post| %>
+  <p>
+    <%= link_to post.title, post_path(post) %>
+  </p>
+<% end %>

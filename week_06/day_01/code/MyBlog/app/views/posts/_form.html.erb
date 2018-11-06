@@ -1,0 +1,11 @@
+<%= form_for @post do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title, required: true %>
+  </div>
+  <div>
+    <%= f.label :body %>
+    <%= f.text_area :body, required: true %>
+  </div>
+  <%= f.submit %>
+<% end %>

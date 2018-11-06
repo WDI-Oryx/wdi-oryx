@@ -1,0 +1,21 @@
+<h2>
+  <%= @post.title %>
+</h2>
+
+<p>
+  <%= @post.body %>
+</p>
+
+<p>
+  Posted <%= time_ago_in_words @post.created_at %> ago
+</p>
+
+<% if @post.user %>
+  <p>
+    Written by: <%= @post.user.email %>
+  </p>
+<% else %>
+  <p>
+    The author was anonymous
+  </p>
+<% end %>
