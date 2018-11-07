@@ -15,7 +15,9 @@ We are going to be using [Devise](https://github.com/plataformatec/devise) to cr
 
 ## Steps
 
-Run `rails new MyBlog --database=postgresql`. You may need to add additional flags (things like `--skip-git`), and you can change the name of the application too. Once you have created your app, move into your app (e.g. `cd MyBlog`). We then need to run `rails db:create`.
+Run `rails new MyBlog --database=postgresql`. You may need to add additional flags (things like `--skip-git`), and you can change the name of the application too. Once you have created your app, move into your app (e.g. `cd MyBlog`).
+
+Now, we need to prepare our database. Open up the Postgres Application, and make sure it has been initialized. We then need to run `rails db:create`.
 
 We now need to download devise into our project. The first step is to add `gem "devise"` to your Gemfile, save and then run `bundle`.
 
@@ -37,7 +39,7 @@ When we try and login (or sign up etc.), it can either go well or it can fail. T
 
 Sometimes we may want to customize the devise forms (e.g. add classes, add new fields etc.). By default, the views for Devise are hidden, so we need to tell Devise to give us access to them so we can make changes. To do this, we run `rails g devise:views`. This will create a folder called app/views/devise, and in the files we can actually make changes.
 
-We now need to tell Devise to organise our authentication system (and what it should add login too - e.g. the `User` model). We run `rails g devise User` to make this happen. This will create a migration, add a User model, plus a whole heap of other stuff. Because there is a migration file, we need to run `rails db:migrate`.
+We now need to tell Devise to organise our authentication system (and what it should add login too - e.g. the `User` model). We run `rails g devise User` to make this happen. This will create a migration, add a User model, plus a whole heap of other stuff. Because there is a migration file, we need to run `rails db:migrate`. After you have run this, you will need to restart your server.
 
 At this point, Devise has defined a whole heap of stuff for you (plus, we have a full authentication system). It has defined two main things that you can use in Controllers and Views:
 
