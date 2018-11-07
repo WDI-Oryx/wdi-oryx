@@ -15,7 +15,7 @@ We are going to be using [Devise](https://github.com/plataformatec/devise) to cr
 
 ## Steps
 
-Run `rails new MyBlog`. You may need to add additional flags (things like `--skip-git`), and you can change the name of the application too. Once you have created your app, move into your app (e.g. `cd MyBlog`).
+Run `rails new MyBlog --database=postgresql`. You may need to add additional flags (things like `--skip-git`), and you can change the name of the application too. Once you have created your app, move into your app (e.g. `cd MyBlog`). We then need to run `rails db:create`.
 
 We now need to download devise into our project. The first step is to add `gem "devise"` to your Gemfile, save and then run `bundle`.
 
