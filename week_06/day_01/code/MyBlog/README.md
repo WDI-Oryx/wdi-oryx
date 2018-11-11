@@ -1,4 +1,6 @@
-# Setting up a Login System
+# Extra Notes
+
+## Setting up a Login System with Devise
 
 We are going to be using [Devise](https://github.com/plataformatec/devise) to create a login system. It is an awesome RubyGem that helps us add authentication (login) to our system. Some of the stuff it gives us (or can give us) are:
 
@@ -13,7 +15,7 @@ We are going to be using [Devise](https://github.com/plataformatec/devise) to cr
 - **Validatable**: provides validations for emails and passwords
 - **Lockable**: handles locking an account after a number of failed login attempts
 
-## Steps
+### Steps
 
 Run `rails new MyBlog --database=postgresql`. You may need to add additional flags (things like `--skip-git`), and you can change the name of the application too. Once you have created your app, move into your app (e.g. `cd MyBlog`).
 
@@ -52,33 +54,30 @@ A really common practice is to use these things for conditional rendering:
 
 ```html
 <% if user_signed_in? %>
-  <p>Stuff for logged in users</p>
+<p>Stuff for logged in users</p>
 <% else %>
-  <p>Stuff for logged out users</p>
+<p>Stuff for logged out users</p>
 <% end %>
 ```
 
 It has also defined a lot of routes for you too. Here are some of the main ones that you will use for logged out users:
 
 ```html
-<%= link_to 'Log In', new_user_session_path %>
-
-<%= link_to "Sign Up", new_user_registration_path %>
+<%= link_to 'Log In', new_user_session_path %> <%= link_to "Sign Up",
+new_user_registration_path %>
 ```
 
 Here are some of the main ones that you will use for logged in users:
 
 ```html
-<%= link_to "Edit Logged In User", edit_user_registration_path %>
-
-<%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
-
-<%= link_to 'Delete Account', user_registration_path, method: :delete %>
+<%= link_to "Edit Logged In User", edit_user_registration_path %> <%= link_to
+'Log Out', destroy_user_session_path, method: :delete %> <%= link_to 'Delete
+Account', user_registration_path, method: :delete %>
 ```
 
-## Extra Stuff
+### Extra Stuff
 
-### Adding extra fields to the User database
+#### Adding extra fields to the User database
 
 By default, Devise only keeps track of Emails and Passwords (plus, a whole heap of other stuff). If you want to add more fields, follow the following steps. I am only doing it for two extra fields (but you can do this for as many fields as you like).
 
@@ -113,7 +112,7 @@ Within app/views/devise/registrations/new.html.erb and app/views/devise/registra
 </div>
 ```
 
-### Protecting pages (making them only for logged in users)
+#### Protecting pages (making them only for logged in users)
 
 Let's pretend that you were trying to create a blog. You may have two models: `User` and `Post`. The way that you might want to continue, is that only logged in users will be able to create, edit and destroy posts. In order to get this sorted, firstly set up your CRUD system for posts.
 
@@ -133,3 +132,57 @@ def create
   redirect_to post_path(post)
 end
 ```
+
+## Image Upload with [Amazon S3](https://aws.amazon.com/s3/)
+
+Open up the documentation [here](https://aws.amazon.com/s3/)
+
+Sign up [here](https://portal.aws.amazon.com/billing/signup?nc2=h_ct&src=default&redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation)
+
+Sign in to the Amazon Console
+
+Click S3
+
+Click Create a Bucket
+
+My Security Credentials
+
+Access Keys
+
+Create new access key
+
+Download key file
+
+Open up config/storage.yml
+
+Add region and bucket
+
+Add some Rails credentials: `EDITOR=code --wait rails credentials:edit`
+
+Uncomment the first couple of lines, add your details
+
+Save and **close** the file!
+
+Sort out your environments...
+
+config/environments/development.rb
+
+```ruby
+
+```
+
+config/environments/test.rb
+
+```ruby
+
+```
+
+config/environments/production.rb
+
+```ruby
+
+```
+
+# Carrier Wave
+
+- Add it to the Gemfile
