@@ -102,6 +102,80 @@ const book = {
 const t = book.title;
 const a = book.author;
 
-const { title, author } = book;
+// const { title, author } = book;
 
-console.log(title, author);
+// console.log(title, author);
+
+const user_id = 2;
+const title = "My new post";
+const body = "A whole heap of text";
+
+// Enhanced Object Literals
+
+// var params = {
+//   user_id: user_id,
+//   title: title,
+//   body: body,
+//   save: function() {
+//     console.log("This post is now saved");
+//   }
+// };
+
+const params = {
+  user_id,
+  title,
+  body,
+  color: "red",
+  save() {
+    console.log("This post is now saved");
+  }
+};
+
+const html = `
+  <h1>${title}</h1>
+  <p>${body}</p>
+`;
+
+document.body.innerHTML = html;
+
+const newUser = {
+  fName: "Billy Bob",
+  age: 42,
+  bio: "klanlkanlaknlakn",
+  email: "billy@ga.co"
+};
+
+const { fName, age, email, bio } = newUser;
+
+const usersShow = `
+  <h1>${fName}</h1>
+  <p>${age}</p>
+  <p>${email}</p>
+  <p>${bio}</p>
+`;
+
+document.body.innerHTML += usersShow;
+
+const allUsers = [
+  {
+    fName: "Billy Bob",
+    age: 42,
+    bio: "klanlkanlaknlakn",
+    email: "billy@ga.co"
+  },
+  {
+    fName: "Rob",
+    age: 84,
+    bio: "klanlkanlaknlakn",
+    email: "rob@ga.co"
+  }
+];
+
+for (let user of allUsers) {
+  document.body.innerHTML += `
+    <h1>${user.fName}</h1>
+    <p>${user.age}</p>
+    <p>${user.email}</p>
+    <p>${user.bio}</p>
+  `;
+}
