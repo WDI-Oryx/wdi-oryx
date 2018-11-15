@@ -17,3 +17,6 @@ module MyBlog
     # the framework and any gems in your application.
   end
 end
+
+# config/application.rb
+require "carrierwave/orm/activerecord"

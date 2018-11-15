@@ -7,3 +7,7 @@
     <%= link_to p.title, post_path(p) %>
   </p>
 <% end %>
+
+<%= cl_image_tag @user.image %>
+
+<%= cl_image_tag current_user.image %>

@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  mount_uploader :image, ImageUploader
+
   has_many :posts
   # For every User, this means we can call .posts
 
