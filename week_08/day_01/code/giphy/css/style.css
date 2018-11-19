@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  font-family: monospace;
+}
+
+nav {
+  color: whitesmoke;
+  background-color: dodgerblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  padding: 10px 30px;
+}
+
+input#search {
+  background: none;
+  padding: 5px 10px;
+  border: 4px solid whitesmoke;
+  outline: none;
+  color: whitesmoke;
+  font-family: monospace;
+}
+
+input#search::placeholder {
+  color: whitesmoke;
+}
+
+.container {
+  text-align: center;
+}

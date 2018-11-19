@@ -1,6 +1,7 @@
 function displayData(words) {
   const output = document.querySelector("#output");
   output.innerHTML = `<p>${words}</p>`;
+  // document.body.style.backgroundColor = words;
 }
 
 function onButtonClick() {
