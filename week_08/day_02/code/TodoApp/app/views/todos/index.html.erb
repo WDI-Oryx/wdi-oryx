@@ -2,6 +2,6 @@
 
 <% @todos.each do |todo| %>
   <p>
-    <%= todo.content %>
+    <%= link_to todo.content, todo %>
   </p>
 <% end %>

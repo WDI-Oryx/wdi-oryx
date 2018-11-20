@@ -19,13 +19,25 @@ function displayAllTodos(data) {
 }
 
 function getAllTodos() {
-  fetch("/todos")
+  fetch("/todos", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json"
+    }
+  })
     .then(responseToJSON)
     .then(displayAllTodos);
 }
 
 function getTodo(id) {
-  fetch(`/todos/${id}`)
+  fetch(`/todos/${id}`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json"
+    }
+  })
     .then(responseToJSON)
     .then(function(data) {
       const showTodoDiv = document.querySelector("#show-todo");
@@ -59,10 +71,10 @@ function addNewTodo(content) {
     body: JSON.stringify(params)
   })
     .then(responseToJSON)
-    .then(data => {
+    .then(todo => {
       const html = `
-        <li id="todo-${data.id}">
-          ${data.content}
+        <li id="todo-${todo.id}" class="${todo.completed ? "complete" : ""}">
+          ${todo.content}
         </li>
       `;
       const ul = document.querySelector("ul");
@@ -78,8 +90,6 @@ function toggleTodo(id) {
     .then(function(data) {
       console.log(data);
     });
-  // PUT
-  // /todos/:id/toggle
 }
 
 // Wait until the page has finished loading before making AJAX requests
@@ -87,7 +97,7 @@ window.onload = function() {
   getAllTodos();
 
   const form = document.querySelector("form");
-  form.addEventListener("submit", function(e) {
+  form.addEventListener("submit", e => {
     e.preventDefault();
     const input = document.querySelector("#new-todo");
     const content = input.value;
@@ -103,5 +113,5 @@ window.onload = function() {
     toggleTodo(id);
   });
 
-  // setInterval(getAllTodos, 10000);
+  setInterval(getAllTodos, 3000);
 };

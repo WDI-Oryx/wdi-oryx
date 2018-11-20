@@ -5,16 +5,19 @@ class TodosController < ApplicationController
   # GET /todos => [{}, {}, {}]
   def index
     @todos = Todo.all
-    render json: @todos
+    respond_to do |format|
+      format.html
+      format.json { render json: @todos }
+    end
   end
 
   # GET /todos/:id => {}
   def show
     @todo = Todo.find_by(id: params[:id])
-    render json: @todo
-    # Can you please turn @todo into JSON
-    # Can you send the JSON form to the browser
-    #   In those little packets...
+    respond_to do |format|
+      format.html
+      format.json { render json: @todo }
+    end
   end
 
   def new
