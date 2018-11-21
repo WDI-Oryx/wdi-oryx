@@ -2,7 +2,7 @@
 import { getTodo, getAllTodos } from "./AJAX";
 
 getTodo();
-getAllTodos();
+// getAllTodos();
 
 // const favNumber = 42;
 
