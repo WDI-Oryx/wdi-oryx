@@ -15,7 +15,8 @@ class Search extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     const { searchTerm } = this.state;
-    console.log("Should render the UserShow component", searchTerm);
+    const hashURL = `/users/${searchTerm}`;
+    this.props.history.push(hashURL);
   }
   render() {
     return (
