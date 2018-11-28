@@ -9,8 +9,11 @@ class UserShow extends React.Component {
       <div>
         <h2>{username}</h2>
         <p>Here is the profile page</p>
+        <hr />
         <UserProfile username={username} />
+        <hr />
         <UserRepositories username={username} />
+        <hr />
       </div>
     );
   }

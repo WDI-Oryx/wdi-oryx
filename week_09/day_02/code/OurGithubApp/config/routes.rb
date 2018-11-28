@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'posts/index'
   root "pages#app"
-  # root to: "pages#app"
+  resources :posts
 end
