@@ -1,0 +1,8 @@
+<% @audios.each do |a| %>
+  <div class="audio">
+    <p>
+      <%= audio_tag a.file %>
+    </p>
+    <button>Play!</button>
+  </div>
+<% end %>
