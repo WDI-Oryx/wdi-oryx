@@ -1,0 +1,16 @@
+<% @user.errors.full_messages.each do |error_message| %>
+  <p class="error-message"><%= error_message %></p>
+<% end %>
+
+<%= form_for @user do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+  <br>
+  <%= f.label :email %>
+  <%= f.email_field :email %>
+  <br>
+  <%= f.submit "Create User" %>
+<% end %>

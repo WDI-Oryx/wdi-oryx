@@ -1,0 +1,59 @@
+Validations
+SETUP
+rails new TestValidations
+rails g model User name:string email:string username:string
+rails db:migrate
+rails g controller Users index show new edit
+
+
+1. User Model
+class User < ApplicationRecord
+  validates :name, presence: true
+  validates :username, uniqueness: true, presence: true
+  validates :email, uniqueness: true, presence: true
+end
+
+2. Form
+<% @user.errors.full_messages.each do |m| %>
+  <p><%= m %></p>
+<% end %>
+
+<%= form_for @user do |f| %>
+  <%= f.text_field :name %>
+  <%= f.text_field :username %>
+  <%= f.email_field :email %>
+  <%= f.submit %>
+<% end %>
+
+
+3. application.css
+ .field_with_errors input {
+   border: 1px solid red;
+ }
+
+ 4. controller
+ class UsersController < ApplicationController
+  def show
+    @user = User.find_by(id: params[:id])
+  end
+
+  def new
+    @user = User.new
+  end
+
+  def create
+    @user = User.new(user_params)
+    if @user.save
+      redirect_to @user
+    else
+      render :new
+    end
+    console
+  end
+
+  private
+
+  def user_params
+    params.require(:user).permit(:name, :username, :email)
+  end
+end
