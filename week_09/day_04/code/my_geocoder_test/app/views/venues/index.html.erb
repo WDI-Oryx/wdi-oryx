@@ -1,0 +1,12 @@
+<div>
+  <% @venue.each do |venue| %>
+    <hr>
+    <h2><%= venue.name %></h2>
+    <h4><%= venue.address %></h4>
+    <ul>
+      <li>Lat: <%= venue.latitude %></li>
+      <li>Long: <%= venue.longitude %></li>
+    </ul>
+  <% end %>
+  <hr>
+</div>
