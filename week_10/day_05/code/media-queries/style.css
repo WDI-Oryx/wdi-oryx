@@ -1,0 +1,44 @@
+html {
+  font-size: 10px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+body {
+  background: salmon;
+}
+
+img {
+  border: 20px solid black;
+  width: 40rem;
+}
+
+@media (min-width: 600px) and (max-width: 1100px) {
+  html {
+    font-size: 15px;
+  }
+
+  body {
+    background: whitesmoke;
+  }
+
+  img {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 20px;
+  }
+
+  body {
+    background: gray;
+  }
+
+  img {
+    border: 30px solid blue;
+  }
+}
