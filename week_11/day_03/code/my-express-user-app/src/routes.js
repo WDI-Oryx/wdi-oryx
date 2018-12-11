@@ -24,18 +24,25 @@ app.get("/instruments/:name", function(req, res) {
   });
 });
 
-// We are creating a CRUD system with Node
-// We are trying to be RESTful (resources)
-
 app.get("/users", function(req, res) {
-  // Go into the database
-  // Get the User table
-  // Run the .findAll method
-  // findAll returns a promise
-  // Once that is done:
-  //  - render the page
-  //  - pass in all of the users
-  res.render("users/index");
+  db.User.findAll().then(function(users) {
+    res.render("users/index", {
+      users: users
+    });
+  });
+});
+
+app.get("/users/new", function(req, res) {
+  res.render("users/new");
+});
+
+app.get("/users/:id", function(req, res) {
+  const { id } = req.params;
+  db.User.findByPk(id).then(function(user) {
+    res.render("users/show", {
+      user
+    });
+  });
 });
 
 module.exports = app;
