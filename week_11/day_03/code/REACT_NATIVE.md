@@ -8,9 +8,10 @@ We'll be using *React-Native* and *Expo* to build our app.
 
 [Learn more about **React-Native**](https://facebook.github.io/react-native/)
 
-## But first, dependencies
-If you don't have *Node* installed, get it from [here](https://nodejs.org/en/)
-
+## But first
+- If you don't have *Node* installed, get it from [here](https://nodejs.org/en/)
+- Download the Expo client for [iOS](https://itunes.apple.com/us/app/expo-client/id982107779?mt=8) or [Android](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en)
+  
 ## Now that we're all ready to start
 
 Install the Expo cli
