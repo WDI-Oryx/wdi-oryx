@@ -1,5 +1,6 @@
 const express = require("express");
 const path = require("path");
+const db = require("../models/index");
 
 const app = express();
 
@@ -27,7 +28,13 @@ app.get("/instruments/:name", function(req, res) {
 // We are trying to be RESTful (resources)
 
 app.get("/users", function(req, res) {
-  // Get all of the users out of the db
+  // Go into the database
+  // Get the User table
+  // Run the .findAll method
+  // findAll returns a promise
+  // Once that is done:
+  //  - render the page
+  //  - pass in all of the users
   res.render("users/index");
 });
 
