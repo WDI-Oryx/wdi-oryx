@@ -78,4 +78,21 @@ app.get("/users/:id/edit", function(req, res) {
   });
 });
 
+app.post("/users/:id", function(req, res) {
+  const { id } = req.params;
+  const { firstName, lastName, email } = req.body;
+  db.User.update(
+    {
+      firstName: firstName,
+      lastName: lastName,
+      email: email
+    },
+    {
+      where: { id: id }
+    }
+  ).then(function() {
+    res.redirect(`/users/${id}`);
+  });
+});
+
 module.exports = app;
