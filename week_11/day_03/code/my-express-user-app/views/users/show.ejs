@@ -28,6 +28,19 @@
     <%= user.email %>
   </p>
 
+  <!-- 
+    user = User.find_by(id: params[:id])
+    user.destroy
+    FORCE THE DESTROY
+    redirect back to the list of all users 
+  -->
+
+  <div class="controls">
+    <form action="/users/<%= user.id %>/delete" method="POST">
+      <input type="submit" value="Delete User">
+    </form>
+  </div>
+
   <%- include("../partials/footer"); %>
 
 </body>
