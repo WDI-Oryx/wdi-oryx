@@ -13,6 +13,8 @@
 
   <%- include("../partials/nav"); %>
 
+  <input type="password" name="password">
+
   <h1>
     <%= user.firstName %>'s Profile Page
   </h1>
@@ -27,6 +29,16 @@
     Email:
     <%= user.email %>
   </p>
+
+  <div class="controls">
+    <a href="/users/<%= user.id %>/edit">
+      Edit User
+    </a>
+
+    <form action="/users/<%= user.id %>/delete" method="POST">
+      <input type="submit" value="Delete User">
+    </form>
+  </div>
 
   <%- include("../partials/footer"); %>
 
