@@ -28,14 +28,11 @@
     <%= user.email %>
   </p>
 
-  <!-- 
-    user = User.find_by(id: params[:id])
-    user.destroy
-    FORCE THE DESTROY
-    redirect back to the list of all users 
-  -->
-
   <div class="controls">
+    <a href="/users/<%= user.id %>/edit">
+      Edit User
+    </a>
+
     <form action="/users/<%= user.id %>/delete" method="POST">
       <input type="submit" value="Delete User">
     </form>

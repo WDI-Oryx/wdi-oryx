@@ -31,7 +31,7 @@ app.get("/instruments/:name", function(req, res) {
 app.get("/users", function(req, res) {
   db.User.findAll().then(function(users) {
     res.render("users/index", {
-      users: users
+      users
     });
   });
 });
@@ -43,9 +43,9 @@ app.get("/users/new", function(req, res) {
 app.post("/users", function(req, res) {
   const { firstName, lastName, email } = req.body;
   db.User.create({
-    firstName: firstName,
-    lastName: lastName,
-    email: email
+    firstName,
+    lastName,
+    email
   }).then(function(user) {
     res.redirect(`/users/${user.id}`);
   });
@@ -65,6 +65,15 @@ app.post("/users/:id/delete", function(req, res) {
   db.User.findByPk(id).then(function(user) {
     user.destroy({ force: true }).then(function() {
       res.redirect("/users");
+    });
+  });
+});
+
+app.get("/users/:id/edit", function(req, res) {
+  const { id } = req.params;
+  db.User.findByPk(id).then(function(user) {
+    res.render("users/edit", {
+      user
     });
   });
 });
