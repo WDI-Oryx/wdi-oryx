@@ -1,0 +1,12 @@
+<div class="container">
+  <% @pokemon.each do |p| %>
+    <div class="card">
+    <div class="title">
+    <h3><%= p.name %> <img src=<%= p.icon %> alt="<%= p.name %>'s icon" class="icon" ></h3>
+    </div>
+    <div class="imgContainer">
+    <img src=<%= p.image %> alt="<%= p.name %>'s image">
+    </div>
+    </div>
+  <% end %>
+</div>
