@@ -1,0 +1,220 @@
+# Web Developer Roadmap
+
+- HTML
+  - Semantics
+  - SEO
+  - Accessibility
+  - SVG
+  - Markdown
+  - Transpilers: Jade/Pug, HAML, Slim, EJS, Handlebars
+  - Static-Site Generators (Gatsby, Hugo, Jekyll)
+
+- CSS
+  - Box Model
+  - Display
+  - Floats
+  - Position
+  - Flexbox
+  - Responsive Web Design
+  - Pseudo-selectors
+  - Vendor Prefixing
+  - Transforms
+  - Filters
+  - Transitions
+  - Animations
+  - SVG Line Drawing
+  - Custom Fonts
+  - CSS Grid
+  - Frameworks and Libraries (Materialize, Boostrap, Foundation, PureCSS, Tachyons, Bulma, SemanticUI)
+  - Preprocessor (SASS/SCSS, Less, Stylus, PreCSS)
+  - Postprocessor (PostCSS)
+  - CSS Architecture (BEMCSS, OOCSS, SMACSS, SUITCSS, Atomic)
+
+- JavaScript
+  - Fundamentals (w/ ES2015)
+  - `this`
+  - Error Handling
+  - Callbacks
+  - AJAX (with XMLHttpRequest, then Fetch)
+  - DOM
+  - DOM Events and Delegation
+  - Promises
+  - Prototypical Inheritance
+  - Classes
+  - Behind the scenes...
+    - ECMAScript and JavaScript
+    - TC39 Process
+    - History of JavaScript
+  - Strict Mode
+  - Higher Order Functions
+  - Closure
+  - Recursion and Stack
+  - Connections (WebSockets, WebRTC)
+  - Currying and Partials
+  - async/await
+  - Web Workers
+  - Progressive Web Applications
+    - Service Workers
+    - Manifest.json
+  - Map, Set, WeakMap, WeakSet
+  - Web Assembly
+
+- JavaScript Ecosystem
+  - Package Manager (NPM, Yarn)
+  - Module Bundler (Webpack, Parcel, RollUp)
+  - Source Maps
+  - Linters (ESLint, JSLint, ESHint, JSCS)
+  - Transpilers (Babel)
+  - Static Type Checkers (TypeScript, Flow)
+  - JavaScript Generators (ReasonML, Elm, ClojureScript, PureScript, Fable)
+  - JavaScript Testing (Jest, Enzyme, Cypress, Jasmine, Ava, Mocha, Chai, Sinon, Karma, Storybook)
+
+- JavaScript Frameworks
+  - Single Page Applications (React, Vue, Angular, Ember, Preact, Polymer, Backbone)
+  - Routing (React-Router, Reach Router)
+  - Server-Side Rendering (Next.js, Nuxt.js, After.js)
+  - State Management (Redux, Mobx, VueX, Flux, Apollo, unstated)
+  - CSS-in-JS (Emotion, Styled-Components, Glamorous)
+
+- JavaScript Libraries
+  - DOM
+    - jQuery
+  - Utilities
+    - Lodash, Momentjs, RXjs, Ramda, Underscore, Faker.js
+  - Animation
+    - Complex Animations: TweenMax, VelocityJS, PopMotion, Tween.js, mojs
+    - Interactivity: ScrollReveal, Parallax.js, Stellar.js, Skrollr, ScrollMagic.js
+  - Data Visualisation
+    - D3.js, Chart.js
+  - SVG
+    - Snap.svg, Raphael, Vivus
+  - 2D
+    - Canvas
+    - P5.js, Paper.js, Two.js etc.
+  - 3D
+    - WebGL
+    - Libraries: Three.js, REGL
+    - Shaders: GLSL
+  - Games
+    - 2D: Phaser, PixiJS
+    - 3D: Babylon, Whitestorm
+  - Web Audio
+    - Howler.js, Tone.js
+  - AI
+    - TensorFlow.js, Brain.js
+
+- JavaScript APIs
+  - Web Components
+  - Web VR
+  - Storage
+    - LocalStorage, SessionStorage, WebSQL, IndexedDB
+  - Device
+    - Battery, Geolocation, Device Orientation, Push API, VibrationAPI
+  - Audio
+    - WebAudio, SpeechSynthesis, SpeechRecognition
+  - Other
+    - Web Share API, Payment API
+
+- JavaScript: Other Applications
+  - Mobile Applications (React Native, Ionic, Cordova, PhoneGap, NativeScript)
+  - Desktop Applications (Electron, Carlo, NW.js, Proton Native)
+
+- Back End
+  - Ruby on Rails
+    - Routing
+    - Controllers
+    - Active Record
+    - Models
+    - Views
+    - ERB
+    - Form Helpers
+    - Asset Pipeline
+    - Helpers
+    - Action Mailer
+    - Active Job
+    - Action Cable
+    - Active Storage
+  - Node.js
+    - Web Server (Express, Koa, Meteor, Sails, Hapi, Loopback)
+    - Database (Sequelize, pg-promise, pg)
+  - Background Workers
+  - Authentication
+    - Basic Authentication
+    - Token Authentication
+    - OAuth
+    - JWT
+    - OpenID
+
+- Other Programming Languages
+  - Golang
+  - Elixir
+  - Rust
+  - Python
+  - Java
+  - Scala
+  - Clojure
+  - .NET
+  - PHP
+  - C#
+  - F#
+  - Swift
+
+- Database
+  - Relational Databases (PostgreSQL, MySQL, MariaDB, SQLite, Oracle, InnoDB)
+  - Non-relational Databases (MongoDB, CouchDB, Cassandra, Couchbase, RethinkDB, DynamoDB )
+  - Hosted (Firebase, Firestore)
+  - GraphQL
+  - Caching (Redis, MemCached)
+  - Searching (ElasticSearch, Solr, Sphinx)
+  - ORM (ActiveRecord, Sequelize)
+
+- Ecosystem
+  - Terminal
+  - Git
+  - GitHub
+  - HTTP
+  - HTTPS
+  - TCP/IP
+  - WebSockets
+  - WebRTC
+  - Hosting
+  - REST
+  - SOAP
+  - Continuous Integration (TravisCI, CircleCI, Jenkins)
+  - Web Servers (Apache, Nginx, Caddy, MS IIS)
+  - Containers (Docker, Kubernetes)
+  - Testing
+  - Security
+  - DevOps
+  - Maths
+
+- Testing
+  - Ruby on Rails
+    - Unit/Integration Testing (RSpec)
+    - End-to-end Testing (Cucumber, Selenium)
+  - Node
+    - Unit Testing (Jest, Mocha, Jasmine, Enzyme, Ava)
+    - Integration Testing (Karma)
+    - End-to-end Testing (Puppeteer, Selenium, Cypress, Cucumber.js, NightWatch)
+
+- Computer Science
+  - Programming
+  - Computer Architecture
+  - Data Structures
+  - Algorithms
+  - Math for CS
+  - Operating Systems
+  - Computer Networking
+  - Databases
+  - Languages and Compilers
+  - Distributed Systems
+
+- Outside Dev
+  - Product Development and Management
+  - Graphic Design
+  - User Experience Design
+  - User Interface Design
+  - Writing
+  - Marketing
+  - Data Science
+  - Data Analytics
